@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Junior Safera - Site Oficial</title>
+    <!-- Inclui o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclui as fontes Bebas Neue e Inter do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Inclui Font Awesome para ícones de redes sociais e vídeo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Adiciona um efeito de rolagem suave para navegação interna */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #f0f0f0;
+        }
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 0.1em;
+        }
+        /* Efeito de brilho de texto mais suave */
+        .text-neon-glow {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 150, 255, 0.6), 0 0 15px rgba(0, 150, 255, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+        .text-neon-glow:hover {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.8), 0 0 30px rgba(0, 150, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+
+    <!-- Seção Principal (Hero) - Novo design com foco em um botão central -->
+    <header id="inicio" class="bg-black min-h-screen flex flex-col items-center justify-center text-center p-4 md:p-8 relative overflow-hidden">
+        <!-- Overlay com gradiente para profundidade -->
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-950 to-gray-900 opacity-80"></div>
+        <div class="container mx-auto relative z-10">
+            <h1 class="text-6xl sm:text-7xl lg:text-9xl font-bold text-[#f0f0f0] mb-4 text-neon-glow cursor-pointer">JUNIOR SAFERA</h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                Da cena eletrônica ao funk: a batida que te move.
+            </p>
+            <!-- Novo layout com um botão principal e links secundários -->
+            <div class="flex flex-col items-center gap-6">
+                <!-- Botão principal para o Show com o novo gradiente de cor vibrante -->
+                <a href="#show" class="bg-gradient-to-r from-purple-800 to-pink-600 hover:from-purple-700 hover:to-pink-500 text-white font-bold py-4 px-12 rounded-full shadow-lg transition-all transform hover:scale-110 flex items-center gap-3 text-2xl">
+                    <i class="fas fa-play mr-2"></i> Saiba mais sobre o Show
+                </a>
+                <!-- Links secundários em um layout horizontal -->
+                <div class="flex flex-row justify-center items-center gap-4 text-sm font-semibold text-gray-200">
+                    <a href="#bio" class="hover:text-white transition-colors">Conheça a Biografia</a>
+                    <span class="text-gray-200">|</span>
+                    <a href="#videos" class="hover:text-white transition-colors">Vídeos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foto do DJ sem fundo -->
+        <div class="absolute inset-0 flex items-end justify-end overflow-hidden z-0 pointer-events-none">
+            <!-- Nota: O caminho para a sua foto local foi atualizado para images/foto01.png -->
+            <img src="images/foto03.png" alt="DJ Junior Safera" class="h-3/4 md:h-full object-contain -mr-16 md:-mr-24 opacity-80 transform transition-all duration-700 hover:scale-105">
+        </div>
+    </header>
+
+    <!-- Seção de Biografia (Conteúdo da imagem enviada) -->
+    <main>
+        <section id="bio" class="py-16 sm:py-24 bg-gradient-to-b from-gray-900 to-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-white text-center">BIOGRAFIA</h2>
+                <div class="flex flex-col lg:flex-row items-center gap-12 mt-12">
+                    <div class="lg:w-1/2">
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Dj, produtor e com uma criatividade ilimitada Júnior é de Parnaíba-PI, onde cresceu e manifestou seu talento na cena eletrônica e no funk.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Na cena eletrônica conquistou espaço em grandes gravadoras como Alphabeat Records com as tracks "Easy Go" e "All Alone" e a gravadora do grande Alok (Controversia Records) com a track "Blue Eyes" em parceria com Clauz, Brenno Cardoso e João Victor.
+                        </p>
+                        <a href="#show" class="mt-4 inline-block text-[#f0f0f0] hover:text-gray-700 font-semibold transition-colors">Saiba sobre o show <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                    <div class="lg:w-1/2">
+                         <img src="images/foto01.png" alt="Foto do DJ Junior Safera" class="rounded-2xl shadow-2xl transform transition-transform duration-500 hover:rotate-3 hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Show (Conteúdo da imagem enviada) -->
+        <section id="show" class="py-16 sm:py-24 bg-gradient-to-b from-gray-950 to-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12 text-white">SHOW</h2>
+                <div class="flex flex-col lg:flex-row items-center gap-12 mt-12">
+                    <div class="lg:w-1/2">
+                        <img src="images/JUNIOR SAFERA (LOGO - BRANCA).png" alt="Cena do show do DJ" class="rounded-2xl shadow-xl transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Eai? gosta de um improviso? Com uma pegada diferente, produz seu próprio show, usando um equipamento de sampler pegando as músicas em alta e fazendo um Reddit misturando ritmos e fazendo um repertório interativo com o público.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Dividido em partes, começa com montagens de funk, mistura de ritmos e viagem ao tempo com relíquias de vários gêneros proporcionando mais interação com o público.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nova Seção de Vídeos do Instagram -->
+        <section id="videos" class="py-16 sm:py-24 bg-gradient-to-b from-gray-900 to-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12 text-white">VÍDEOS NO INSTAGRAM</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Vídeo 1 -->
+                    <div class="w-full aspect-[4/5] rounded-2xl shadow-xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/reel/DDxyrqrgerb/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="rounded-2xl"></iframe>
+                    </div>
+
+                    <!-- Vídeo 2 -->
+                    <div class="w-full aspect-[4/5] rounded-2xl shadow-xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/reel/DMx0AlfueHT/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="rounded-2xl"></iframe>
+                    </div>
+
+                    <!-- Vídeo 3 -->
+                    <div class="w-full aspect-[4/5] rounded-2xl shadow-xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/reel/C35-xCBAJi1/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="rounded-2xl"></iframe>
+                    </div>
+                </div>
+                <!-- Botão para o perfil do Instagram -->
+                <div class="text-center mt-12">
+                     <a href="https://www.instagram.com/dj_jrsafera" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-fit mx-auto">
+                        <i class="fab fa-instagram text-2xl"></i>
+                        <span class="text-lg">Veja Mais no Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Conexão Social -->
+        <section id="social" class="py-16 bg-gradient-to-b from-gray-950 to-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-8 text-white">Conecte-se</h2>
+                <div class="flex justify-center space-x-6 sm:space-x-8">
+                    <!-- Botão do WhatsApp -->
+                    <a href="https://wa.me/5586995663305" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center gap-3">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span class="text-lg">WhatsApp</span>
+                    </a>
+                    <!-- Botão do Instagram -->
+                    <a href="https://www.instagram.com/dj_jrsafera" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center gap-3">
+                        <i class="fab fa-instagram text-2xl"></i>
+                        <span class="text-lg">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-black py-8 text-center text-gray-500">
+        <p class="text-sm">&copy; 2024 DJ Junior Safera. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
