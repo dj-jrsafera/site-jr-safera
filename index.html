@@ -33,7 +33,38 @@
         .text-neon-glow:hover {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.8), 0 0 30px rgba(0, 150, 255, 0.6);
         }
-    </style>
+
+       
+        @keyframes glow {
+            0% {
+            text-shadow: 0 0 5px #f0f0f0, 0 0 5px #f0f0f0, 0 0 20px rgba(0, 255, 255, 0.877);
+            }
+            50% {
+            text-shadow: 0 0 10px #f0f0f0, 0 0 5px #0ff, 0 0 40px rgba(0, 255, 255, 0.596);
+            }
+            100% {
+            text-shadow: 0 0 20px #f0f0f0, 0 0 5px #f0f0f0, 0 0 20px rgba(0, 255, 255, 0.664);
+            }
+        }
+
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        /* Estilos adicionais para o plano de fundo */
+    .header-bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.1; /* Ajuste o valor de 0 a 1 */
+    }
+     </style>
 </head>
 <body class="bg-black text-gray-100">
 
@@ -41,8 +72,9 @@
     <header id="inicio" class="bg-black min-h-screen flex flex-col items-center justify-center text-center p-4 md:p-8 relative overflow-hidden">
         <!-- Overlay com gradiente para profundidade -->
         <div class="absolute inset-0 bg-gradient-to-b from-gray-950 to-gray-900 opacity-80"></div>
+         <img src="images/fundo01.jpg" alt="Plano de fundo DJ Junior Safera" class="header-bg-image">
         <div class="container mx-auto relative z-10">
-            <h1 class="text-7xl sm:text-8xl lg:text-9xl font-bold text-[#f0f0f0] mb-4 text-neon-glow cursor-pointer">JUNIOR SAFERA</h1>
+            <h1 class="text-7xl sm:text-8xl lg:text-9xl font-bold text-[#f0f0f0] mb-4 text-neon-glow cursor-pointer  animate-glow">JUNIOR SAFERA</h1>
             <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto">
                 Da cena eletrônica ao funk: a batida que te move.
             </p>
@@ -92,7 +124,6 @@
 
         <!-- Seção de Show (Conteúdo da imagem enviada) -->
         <section id="show" class="py-16 sm:py-24 bg-gradient-to-b from-gray-950 to-gray-900">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12 text-white">SHOW</h2>
                 <div class="flex flex-col lg:flex-row items-center gap-12 mt-12">
                     <div class="lg:w-1/2">
@@ -158,6 +189,18 @@
                 </div>
             </div>
         </section>
+
+          <!-- Seção para download de materiais -->
+
+                <section id="download" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-8 text-white">Download</h2>
+            <a href="https://drive.google.com/drive/folders/seu-link-do-drive" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-fit mx-auto">
+            <i class="fab fa-google-drive text-2xl"></i>
+            <span class="text-lg">Material</span>
+            </a>
+            </div>
+            </section>
     </main>
 
     <!-- Rodapé -->
